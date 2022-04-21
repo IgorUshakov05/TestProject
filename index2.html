@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style2.css">
+    <title>Регистрация</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+        <div id="app">
+            <p class="exite">Добро пожаловать!</p>
+            <div v-if="10 == 10" id="icon">
+                <img v-if="selected.id == 1" src='./img/studi.png' alt="No">
+                <img v-else src='img\teacher.png'>
+            </div>
+            <form class="form" action="https://www.xvideos.com/lang/russian/3" method="post">
+                <div class="inputs">
+                    <input v-model="mail" type="email" name="mai" class="mail" placeholder="Введите почту">            
+                <select v-model="selected">
+                    <option v-for="product in products" v-bind:value="{ id: product.id, text: product.name }">
+                    
+                        {{ product.name }}
+                    </option>
+                    
+                </select>
+                    <input
+                    v-model="val0"
+                    class="ho" type="password" name="pass" id="password" placeholder="Введите пароль" class="mail">
+                    <input 
+                    v-model="val" type="password" name="pass" id="password1" placeholder="Подтвердите пароль" class="mail">
+                </div>
+                <div class="show">
+                    <input @click="show" type="checkbox" id="show">
+                    <label id="sj">Показать пароль</label>
+                </div>
+                <div class="but">
+                    <button 
+                    :class="this.pass ? 'da':''"
+                    :disabled="val0 != val">Регистрация</button>
+
+                    <div class="pa">
+                    <a class="rek" href="index.html">Войти</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    <script src="./scripts/registration.js"></script>
+</body>
+</html>
